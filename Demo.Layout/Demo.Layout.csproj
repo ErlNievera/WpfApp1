@@ -9,24 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="BurgenMenuIcon.png" />
-    <None Remove="Burgerrrr.jpg" />
+    <None Remove="CalendarIcon.png" />
     <None Remove="Gear.png" />
     <None Remove="GEAR2.png" />
-    <None Remove="menu-bar.png" />
+    <None Remove="menu-burger.png" />
+    <None Remove="PeopleIcon.png" />
     <None Remove="settings.png" />
-    <None Remove="Stats.png" />
+    <None Remove="trend.png" />
     <None Remove="uac_logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="BurgenMenuIcon.png" />
-    <Resource Include="Burgerrrr.jpg" />
+    <Resource Include="CalendarIcon.png" />
     <Resource Include="Gear.png" />
     <Resource Include="GEAR2.png" />
-    <Resource Include="menu-bar.png" />
+    <Resource Include="menu-burger.png" />
+    <Resource Include="PeopleIcon.png" />
     <Resource Include="settings.png" />
-    <Resource Include="Stats.png" />
+    <Resource Include="trend.png" />
     <Resource Include="uac_logo.png" />
   </ItemGroup>
 
