@@ -64,7 +64,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -72,31 +72,49 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <TextBlock Margin="40,1,1,0" Text="Statistic 2026-20207" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+            <TextBlock Margin="45,1,1,0" Text="Statistic 2026-20207" FontSize="25" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
             <Image  Margin="8" VerticalAlignment="Center" HorizontalAlignment="Left" Source="/trend.png"></Image>
 
-            <TextBlock Grid.Column="1" Text="Last 3 Days Application" VerticalAlignment="Center" Margin="40,1,1,0" FontWeight="Bold"></TextBlock>
+            <TextBlock Grid.Column="1" Text="Last 3 Days Application" FontSize="25" VerticalAlignment="Center" Margin="45,0,0,0" FontWeight="Bold"></TextBlock>
             <Image Source="/CalendarIcon.png" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8"></Image>
             
-            <TextBlock Grid.Column="2" Text="For Your Interview" VerticalAlignment="Center" Margin="40,1,1,0" FontWeight="Bold"></TextBlock>
+            <TextBlock Grid.Column="2" Text="For Your Interview" VerticalAlignment="Center" Margin="45,1,1,0" FontSize="25" FontWeight="Bold"></TextBlock>
             <Image Source="/PeopleIcon.png" Grid.Column="2" Margin="8" VerticalAlignment="Center" HorizontalAlignment="Left" ></Image>
 
-
-            <TextBlock Grid.Row="2" Text="2"></TextBlock>
             <TextBlock Grid.Row="3" Text="117"></TextBlock>
             <TextBlock Grid.Row="4" Text="17"></TextBlock>
             <TextBlock Grid.Row="5" Text="3"></TextBlock>
 
-            <TextBlock Grid.Column="1" Grid.Row="1" Text="1"></TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="2" Text="6"></TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="3" Text="1"></TextBlock>
             <TextBlock Grid.Column="1" Grid.Row="4" Text="0"></TextBlock>
 
-            <TextBlock Grid.Column="2" Grid.Row="1" Text="0" Background="#FFA91010" Foreground="White"></TextBlock>
+            <StackPanel Margin="5" Background="White" Grid.Row="1">
+                <StackPanel.Effect>
+                    <DropShadowEffect/>
+                </StackPanel.Effect>
+                <TextBlock Text="117" HorizontalAlignment="Left" Margin="10,1,1,5" FontWeight="Bold" FontSize="25"></TextBlock>
+                <TextBlock Text="Erl lorence Nievera" HorizontalAlignment="Left" Margin="10,1,1,5" FontSize="13"></TextBlock>
+            </StackPanel>
 
-            <StackPanel Grid.Row="1">
-                <TextBlock Text="117" VerticalAlignment="Center" Margin="40,1,1,2" FontSize="30"></TextBlock>
-                <TextBlock Text="Erl lorence Nievera" VerticalAlignment="Center" Margin="40,0,1,0" FontSize="15"></TextBlock>
+            <StackPanel Margin="5" Background="White" Grid.Row="1" Grid.Column="1">
+                <StackPanel.Effect>
+                    <DropShadowEffect/>
+                </StackPanel.Effect>
+                <TextBlock HorizontalAlignment="Left" FontWeight="Bold" FontSize="25" Margin="10,1,1,5" Grid.Column="1" Grid.Row="1" Text="1"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" FontSize="13" Margin="10,1,1,5" Grid.Column="1" Grid.Row="1" Text="Preparatory Department"></TextBlock>
+            </StackPanel>
+            
+            <StackPanel Margin="5" Background="#FFEE1E24" Grid.Column="3" Grid.Row="1">
+                <StackPanel.Effect>
+                    <DropShadowEffect/>
+                </StackPanel.Effect>
+                <TextBlock Grid.Column="2" Margin="10,1,1,5" Grid.Row="1" Text="0" FontWeight="Bold" FontSize="25" HorizontalAlignment="Left" Foreground="White"></TextBlock>
+                <TextBlock Grid.Column="2" Margin="10,1,1,5" Grid.Row="1" Text="For Your Interview" FontSize="13" HorizontalAlignment="Left" Foreground="White"></TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <TextBlock Grid.Row="2" FontSize="25" FontWeight="Bold" Text="2"></TextBlock>
             </StackPanel>
             <Grid.Background>
                 <ImageBrush ImageSource="/uac_logo.png" Stretch="Uniform" Opacity="0.2"></ImageBrush>
