@@ -14,7 +14,7 @@
             <Setter Property="Background" Value="Transparent"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="FontSize" Value="10"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
             <Setter Property="Margin" Value="30,2,2,2"></Setter>
         </Style>
     </Window.Resources>
@@ -23,18 +23,21 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Image Source="/uac_logo.png" Margin="5"></Image>
-                <TextBlock Grid.Column="1" Foreground="White" Text="UAC Intergrated System" VerticalAlignment="Center"></TextBlock>
+                <TextBlock  FontSize="15" Foreground="White" Text="UAC Intergrated System" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="70,10,30,0"/>
             </Grid>
             <Grid Grid.Row="1">
                 <StackPanel Margin="10">
-                    <Label Foreground="White" FontWeight="Bold" Content="Registrar Module"></Label>
+                    <Label FontSize="20" Foreground="White" FontWeight="Bold" Content="Registrar Module"></Label>
+                    <Button Content="Admissions"></Button>
                     <Button Content="Student"></Button>
                     <Button Content="Section"></Button>
                     <Button Content="Grades Encoding"></Button>
@@ -45,6 +48,15 @@
                     <Button Content="Survey"></Button>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Margin="10">
+                    <Label Content="Academics Module" Foreground="White" FontWeight="Bold" FontSize="20"></Label>
+                    <Button Content="Admissions"></Button>
+                    <Button Content="Enlistment"></Button>
+                    <Button Content="Query"></Button>
+                    <Button Content="Utilities"></Button>
+                </StackPanel>
+            </Grid>
         </Grid>
         <Grid DockPanel.Dock="Top" Height="40" Background="#FFFFC107">
             <Grid.ColumnDefinitions>
@@ -52,19 +64,21 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="40"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            
             <TextBlock></TextBlock>
             <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1" Text="Erl Nievera"></TextBlock>
+            
             <Image  Margin="8" Source="/menu-burger.png" ></Image>
             <Image Margin="8" Grid.Column="2" Source="/settings.png"></Image>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition MaxWidth="500"></ColumnDefinition>
+                <ColumnDefinition MaxWidth="500"></ColumnDefinition>
+                <ColumnDefinition MaxWidth="500"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -81,23 +95,35 @@
             <TextBlock Grid.Column="2" Text="For Your Interview" VerticalAlignment="Center" Margin="45,1,1,0" FontSize="25" FontWeight="Bold"></TextBlock>
             <Image Source="/PeopleIcon.png" Grid.Column="2" Margin="8" VerticalAlignment="Center" HorizontalAlignment="Left" ></Image>
 
+            <Border Name="mask7" Background="#FFFFFF" Grid.Row="1" CornerRadius="6,6,6,6" Opacity="1"></Border>
             <StackPanel Margin="5" Background="#FAF9F6" Grid.Row="1">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask7}"></VisualBrush>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
                 <TextBlock Text="119" Margin="10,50,1,5" FontWeight="Black" FontSize="30"></TextBlock>
                 <TextBlock Text="Erl lorence Nievera" Margin="10,1,1,5" FontSize="20"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask5" Background="#FFFFFF" Grid.Row="1" Grid.Column="1" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Margin="5" Background="#FAF9F6" Grid.Row="1" Grid.Column="1">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask5}"></VisualBrush>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
-                    <DropShadowEffect/>
+                    <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
                 <TextBlock FontWeight="Black" FontSize="30" Margin="10,50,1,5" Text="1"></TextBlock>
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="Preparatory Department"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask6" Background="#FFFFFF" Grid.Row="1" Grid.Column="2" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Margin="5" Background="#FFEE1E24" Grid.Column="3" Grid.Row="1">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask6}"></VisualBrush>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
@@ -112,6 +138,8 @@
                 <TextBlock Margin="10,50,1,5" FontSize="30" FontWeight="Black" Text="2"></TextBlock>
                 <TextBlock Margin="10,1,1,5" FontSize="20" Text="New Applications" ></TextBlock>
             </StackPanel>
+
+
             <StackPanel Background="#FAF9F6" Margin="5" Grid.Row="3">
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
@@ -120,7 +148,11 @@
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="Completed Requirements"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask4" Grid.Row="4" Background="#FFFFFF" CornerRadius="6,6,6,6" Opacity="1"></Border>
             <StackPanel Grid.Row="4" Background="#FAF9F6" Margin="5">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask4}"></VisualBrush>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
@@ -128,7 +160,11 @@
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="Applicants Scheduled Today"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask3" Background="#FFFFFF" Grid.Row="2" Grid.Column="1" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Background="#FAF9F6" Margin="5" Grid.Row="5">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask3}"/>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
@@ -136,7 +172,11 @@
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="No Show"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask2" Background="#FFFFFF" Grid.Row="2" Grid.Column="1" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Margin="5" Background="#FAF9F6" Grid.Row="2" Grid.Column="1">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask2}"/>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black" />
                 </StackPanel.Effect>
@@ -144,8 +184,11 @@
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="Basic Education"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask1" Background="#FFFFFF" Grid.Row="3" Grid.Column="1" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Grid.Row="3" Grid.Column="1" Margin="5" Background="#FAF9F6">
-
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask1}"/>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
@@ -153,7 +196,11 @@
                 <TextBlock FontSize="20" Margin="10,1,1,5" Text="Senior High School"></TextBlock>
             </StackPanel>
 
+            <Border Name="mask" Background="#FFFFFF" Grid.Row="4" Grid.Column="1" CornerRadius="6,6,6,6" Opacity="1"/>
             <StackPanel Grid.Row="4" Grid.Column="1" Margin="5" Background="#FAF9F6">
+                <StackPanel.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=mask}"/>
+                </StackPanel.OpacityMask>
                 <StackPanel.Effect>
                     <DropShadowEffect Color="Black"/>
                 </StackPanel.Effect>
@@ -162,7 +209,7 @@
             </StackPanel>
 
             <Grid.Background>
-                <ImageBrush ImageSource="/uac_logo.png" Stretch="Uniform" Opacity="0.2"></ImageBrush>
+                <ImageBrush ImageSource="/uac_logo.png" Stretch="Uniform" Opacity="0.2" Viewport="0,0,1,1"></ImageBrush>
             </Grid.Background>
         </Grid>
     </DockPanel>
