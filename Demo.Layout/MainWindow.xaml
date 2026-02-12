@@ -97,13 +97,13 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label Margin="45,1,1,0" Content="Statistic 2026-20207" VerticalAlignment="Center" FontWeight="Bold"></Label>
+            <Label Margin="36,-4,0,0" Content="Statistic 2026-20207" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.271,0.446"></Label>
             <Image  Margin="8" VerticalAlignment="Center" HorizontalAlignment="Left" Source="/trend.png"></Image>
 
-            <Label Grid.Column="1" Content="Last 3 Days Application" VerticalAlignment="Center" Margin="45,0,0,0" FontWeight="Bold"></Label>
+            <Label Grid.Column="1" Content="Last 3 Days Application" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,-4,0,0" FontWeight="Bold" RenderTransformOrigin="0.123,0.5"></Label>
             <Image Source="/CalendarIcon.png" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="8"></Image>
 
-            <Label Grid.Column="2" Content="For Your Interview" VerticalAlignment="Center" Margin="45,1,1,0" FontWeight="Bold"></Label>
+            <Label Grid.Column="2" Content="For Your Interview" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="36,-4,0,0" FontWeight="Bold" RenderTransformOrigin="0.254,0.446"></Label>
             <Image Source="/PeopleIcon.png" Grid.Column="2" Margin="8" VerticalAlignment="Center" HorizontalAlignment="Left" ></Image>
 
             <Border Name="mask7" Background="#FFFFFF" Grid.Row="1" CornerRadius="6,6,6,6" Opacity="1"></Border>
